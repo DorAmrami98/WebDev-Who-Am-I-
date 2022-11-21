@@ -1,0 +1,175 @@
+/*BACKGROUND COLOR AND PARAGRAPH TEXT COLOR*/
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+/*BACKGROUND COLOR*/
+ background: #ffffff; 
+} 
+
+/*TEXT COLOR*/
+p { 
+ color: #000000;
+ } 
+
+
+/* HEADERS AND PARAGRAPHS FONT SIZE */
+/* 1 */
+h1 {
+  font-size: 50px;
+}
+/* 2 */
+h2 {
+  font-size: 40px;
+}
+/* 3 */
+p {
+  font-size: 30px;
+}
+
+
+/*RADIO STYLE TABS*/
+/* 4 */
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+.tabset .tab-panel {
+  display: none;
+}
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+/* TABS Styling */
+/* 5 */
+body {
+  font: 20px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  color: #000000;
+  font-weight: 300;
+}
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 25px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/*TABS BACKGROUND COLOR*/
+.tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 22px;
+  height: 4px;
+  background: #ffffff;
+}
+
+/*TAB NAME COLOR */
+.tabset > label:hover,
+.tabset > input:focus + label {
+  color: #ffffff;
+}
+
+/*MOUSE CLICKING/HOVERING COLOR*/
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: #2c14e1;
+}
+
+/*TABS LOWER BORDER COLOR*/
+.tabset > input:checked + label {
+  border-bottom: 1px solid #000000;
+  margin-bottom: -1px;
+}
+
+.tab-panel {
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 30px;
+}
+
+.tabset {
+  max-width: 70em;
+}
+
+
+/*MOVEMENT OF THE TEXT*/
+p {
+  animation-duration: 0.7s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+/*SLIDEIN ANIMATION*/
+/* 6 */
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+/*TABLE*/
+/* Creates three equal columns that floats next to each other */
+/* 7 */
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: flex;
+  clear: both;
+/* 	display: ; */
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/*CLASSES*/
+/* 8 */
+.image {
+  width: 33%;
+  height: 380px;
+}
+
+.songs {
+  margin-right: 100%;
+}
+
+.intro-gif {
+  margin-right: 100%;
+}
